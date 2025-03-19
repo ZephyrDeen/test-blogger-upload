@@ -1,0 +1,18 @@
+modules:
+  confluence:globalPage:
+    - key: test-blogger-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: test-blogger
+      route: hello-world
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/926a61f1-ad3b-4fb1-acc8-d858754b24ea
